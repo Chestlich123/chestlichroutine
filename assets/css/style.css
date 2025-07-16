@@ -1,0 +1,17 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { text-align: center; color: #2e7d32; }
+.nav { text-align: center; margin-bottom: 10px; }
+.nav button { background: none; border: none; font-size: 1.2em; cursor: pointer; padding: 0 10px; }
+#calendar { display: grid; grid-template-columns: repeat(7,1fr); gap:4px; max-width:420px; margin:0 auto; }
+.day-cell { border:1px solid #999; padding:5px; font-size:0.8em; text-align:center; cursor:pointer; user-select:none; height:50px; line-height:1.2; }
+.day-cell.selected { outline:2px solid #4CAF50; }
+.day-cell.mark-yapti { background-color:#d4ffd4; }
+.day-cell.mark-yapmadi { background-color:#ffd4d4; }
+.day-cell.mark-offday { background-color:orange; }
+.selection-panel { max-width:500px; margin:10px auto; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center; }
+.selection-panel button, .selection-panel select, .selection-panel input { margin:0; padding:6px; font-size:0.9em; }
+.selection-panel ul { list-style-type:disc; text-align:left; width:100%; margin-top:10px; padding-left:20px; }
+#charts { position:absolute; top:20px; right:20px; display:flex; flex-direction:column; align-items:flex-end; }
+.chart-container { margin-bottom:20px; background:#fff; padding:10px; border:1px solid #ddd; }
+.chart-container h3 { margin:0 0 5px 0; font-size:1em; text-align:center; }
+.chart-container canvas { width:150px!important; height:150px!important; }
