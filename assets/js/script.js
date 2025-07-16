@@ -1,3 +1,4 @@
+console.log("✅ script.js yüklendi!");
 const calendarEl=document.getElementById('calendar');
 const monthYearEl=document.getElementById('monthYear');
 const prevBtn=document.getElementById('prevMonth');
