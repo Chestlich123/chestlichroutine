@@ -1,4 +1,44 @@
 console.log("✅ script.js yüklendi!");
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const btnSignup = document.getElementById('btnSignup');
+const btnLogin = document.getElementById('btnLogin');
+
+btnSignup.onclick = () => {
+  auth.createUserWithEmailAndPassword(
+    emailInput.value.trim(),
+    passwordInput.value
+  )
+  .then(cred => {
+    console.log('Kayıt başarılı, UID =', cred.user.uid);
+  })
+  .catch(err => {
+    console.error('Kayıt hatası:', err.message);
+  });
+};
+
+btnLogin.onclick = () => {
+  auth.signInWithEmailAndPassword(
+    emailInput.value.trim(),
+    passwordInput.value
+  )
+  .then(cred => {
+    console.log('Giriş başarılı, UID =', cred.user.uid);
+  })
+  .catch(err => {
+    console.error('Giriş hatası:', err.message);
+  });
+};
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log('Oturum açık:', user.uid);
+    loadCalendar(user.uid);
+    loadFoods(user.uid);
+  } else {
+    console.log('Oturum kapalı');
+  }
+});
 const calendarEl=document.getElementById('calendar');
 const monthYearEl=document.getElementById('monthYear');
 const prevBtn=document.getElementById('prevMonth');
@@ -161,6 +201,9 @@ nextBtn.onclick=()=>{
  selectedMonth++; if(selectedMonth>11){selectedMonth=0;selectedYear++;}
  selectedDateKey=null;renderCalendar();updateCharts();updateSidebarMacro();
 };
+
+renderCalendar();updateCharts();
+updateSidebarMacro();
 
 renderCalendar();updateCharts();
 updateSidebarMacro();
