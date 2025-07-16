@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>MyRoutine</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
-<script>
-const firebaseConfig = {
-  apiKey: "AIzaSyApsRTtMt-ay0bXpwVYlAH-HR0Hyzyn5To",
-  authDomain: "myroutine-351cb.firebaseapp.com",
-  projectId: "myroutine-351cb",
-  storageBucket: "myroutine-351cb.appspot.com",
-  messagingSenderId: "634328423979",
-  appId: "1:634328423979:web:b7fe811b2a232da29f146e",
-  measurementId: "G-TB43WSJ3K8"
-};
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db   = firebase.firestore();
-</script>
+  <meta charset="UTF-8">
+  <title>MyRoutine</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyApsRTtMt-ay0bXpwVYlAH-HR0Hyzyn5To",
+      authDomain: "myroutine-351cb.firebaseapp.com",
+      projectId: "myroutine-351cb",
+      storageBucket: "myroutine-351cb.appspot.com",
+      messagingSenderId: "634328423979",
+      appId: "1:634328423979:web:b7fe811b2a232da29f146e",
+      measurementId: "G-TB43WSJ3K8"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db   = firebase.firestore();
+  </script>
+  <script>
+    console.log("🔌 firebase:", !!firebase, !!auth, !!db);
+  </script>
 </head>
 
 <body>
@@ -50,3 +53,4 @@ const db   = firebase.firestore();
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
