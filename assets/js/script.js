@@ -201,6 +201,3 @@ nextBtn.onclick=()=>{
  selectedMonth++; if(selectedMonth>11){selectedMonth=0;selectedYear++;}
  selectedDateKey=null;renderCalendar();updateCharts();updateSidebarMacro();
 };
-
-renderCalendar();updateCharts();
-updateSidebarMacro();
