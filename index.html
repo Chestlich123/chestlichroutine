@@ -12,7 +12,7 @@
       apiKey: "AIzaSyApsRTtMt-ay0bXpwVYlAH-HR0Hyzyn5To",
       authDomain: "myroutine-351cb.firebaseapp.com",
       projectId: "myroutine-351cb",
-      storageBucket: "myroutine-351cb.appspot.com",
+      storageBucket: "myroutine-351cb.firebasestorage.app",
       messagingSenderId: "634328423979",
       appId: "1:634328423979:web:b7fe811b2a232da29f146e",
       measurementId: "G-TB43WSJ3K8"
@@ -20,9 +20,6 @@
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const db   = firebase.firestore();
-  </script>
-  <script>
-    console.log("🔌 firebase:", !!firebase, !!auth, !!db);
   </script>
 </head>
 
@@ -53,4 +50,3 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
