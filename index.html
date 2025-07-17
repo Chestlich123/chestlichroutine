@@ -9,44 +9,30 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
   <script>
     const firebaseConfig = {
-      apiKey: "AIzaSyApsRTrMt-ay0bXpwVYlAH-HR0Hzyzn5To",
-      authDomain: "myroutine-351cb.firebaseapp.com",
-      projectId: "myroutine-351cb",
-      storageBucket: "myroutine-351cb.appspot.com",
-      messagingSenderId: "634328423979",
-      appId: "1:634328423979:web:b7fe811b2a232da29f146e",
-      measurementId: "G-TB43WSJ3K8"
+      apiKey:"AIzaSyApsRTrMt-ay0bXpwVYlAH-HR0Hzyzn5To",
+      authDomain:  "myroutine-351cb.firebaseapp.com",
+      projectId:   "myroutine-351cb",
+      storageBucket:"myroutine-351cb.appspot.com",
+      messagingSenderId:"634328423979",
+      appId:       "1:634328423979:web:b7fe811b2a232da29f146e",
+      measurementId:"G-TB43WSJ3K8"
     };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const db   = firebase.firestore();
   </script>
 </head>
-
 <body>
-<h1>MyRoutine - Spor Takip Sistemi</h1>
-
+  <h1>MyRoutine – Spor Takip Sistemi</h1>
   <div id="authSection">
     <input id="email"    type="email"    placeholder="E‑posta">
     <input id="password" type="password" placeholder="Şifre">
-    <button id="btnSignup">Kayıt Ol</button>
-    <button id="btnLogin">Giriş Yap</button>
+    <button id="btnSignup">Kayıt Ol</button>
+    <button id="btnLogin">Giriş Yap</button>
   </div>
-
-  <div class="nav">
-        <button id="prevMonth">&larr;</button>
-        <span id="monthYear"></span>
-        <button id="nextMonth">&rarr;</button>
-    </div>
-    <div id="calendar"></div>
-    <div id="selectionPanel" class="selection-panel"></div>
-    <div id="charts">
-        <div class="chart-container"><h3>Ağırlık Antrenmanı</h3><canvas id="weightChart"></canvas></div>
-        <div class="chart-container"><h3>Kardiyo</h3><canvas id="cardioChart"></canvas></div>
-        <div class="chart-container"><h3>Makro Dağılımı</h3><canvas id="macroSidebarChart"></canvas></div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-    <script src="assets/js/script.js"></script>
+  <!-- geri kalan calendar ve chart yapınız -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
