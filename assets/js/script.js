@@ -204,6 +204,3 @@ nextBtn.onclick=()=>{
 
 renderCalendar();updateCharts();
 updateSidebarMacro();
-
-renderCalendar();updateCharts();
-updateSidebarMacro();
