@@ -28,18 +28,17 @@ btnLogin.onclick = () => {
   .catch(err => {
     console.error('Giriş hatası:', err.message);
   });
-  auth.onAuthStateChanged(user => {
+};
+
+auth.onAuthStateChanged(user => {
   if (user) {
     console.log('Oturum açık:', user.uid);
     loadCalendar(user.uid);
     loadFoods(user.uid);
-    renderCalendar();
-    updateCharts();
-    updateSidebarMacro();
   } else {
     console.log('Oturum kapalı');
   }
-};
+});
 const calendarEl=document.getElementById('calendar');
 const monthYearEl=document.getElementById('monthYear');
 const prevBtn=document.getElementById('prevMonth');
@@ -84,6 +83,10 @@ function loadFoods(uid) {
       }
     });
 }
+auth.onAuthStateChanged(user => {
+  if (user) {
+    loadCalendar(user.uid);
+    loadFoods(user.uid);
   }
 });
 
@@ -196,8 +199,8 @@ prevBtn.onclick=()=>{
 };
 nextBtn.onclick=()=>{
  selectedMonth++; if(selectedMonth>11){selectedMonth=0;selectedYear++;}
- selectedDateKey=null
+ selectedDateKey=null;renderCalendar();updateCharts();updateSidebarMacro();
 };
-renderCalendar();
-updateCharts();
+
+renderCalendar();updateCharts();
 updateSidebarMacro();
