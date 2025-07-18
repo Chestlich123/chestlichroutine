@@ -12,7 +12,7 @@
       apiKey: "AIzaSyApsRTtMt-ay0bXpwVYlAH-HR0Hyzyn5To",
       authDomain: "myroutine-351cb.firebaseapp.com",
       projectId: "myroutine-351cb",
-      storageBucket: "myroutine-351cb.appspot.com",
+      storageBucket: "myroutine-351cb.firebasestorage.app",
       messagingSenderId: "634328423979",
       appId: "1:634328423979:web:b7fe811b2a232da29f146e",
       measurementId: "G-TB43WSJ3K8"
@@ -22,8 +22,9 @@
     const db   = firebase.firestore();
   </script>
 </head>
+
 <body>
-  <h1>MyRoutine - Spor Takip Sistemi</h1>
+ <h1>MyRoutine - Spor Takip Sistemi
 
   <div id="authSection">
     <input id="email"    type="email"    placeholder="E‑posta">
@@ -33,20 +34,19 @@
   </div>
 
   <div class="nav">
-    <button id="prevMonth">&larr;</button>
-    <span id="monthYear"></span>
-    <button id="nextMonth">&rarr;</button>
-  </div>
-  <div id="calendar"></div>
-  <div id="selectionPanel" class="selection-panel"></div>
-  <div id="charts">
-    <div class="chart-container"><h3>Ağırlık Antrenmanı</h3><canvas id="weightChart"></canvas></div>
-    <div class="chart-container"><h3>Kardiyo</h3><canvas id="cardioChart"></canvas></div>
-    <div class="chart-container"><h3>Makro Dağılımı</h3><canvas id="macroSidebarChart"></canvas></div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-  <script src="assets/js/script.js"></script>
+        <button id="prevMonth">&larr;</button>
+        <span id="monthYear"></span>
+        <button id="nextMonth">&rarr;</button>
+    </div>
+    <div id="calendar"></div>
+    <div id="selectionPanel" class="selection-panel"></div>
+    <div id="charts">
+        <div class="chart-container"><h3>Ağırlık Antrenmanı</h3><canvas id="weightChart"></canvas></div>
+        <div class="chart-container"><h3>Kardiyo</h3><canvas id="cardioChart"></canvas></div>
+        <div class="chart-container"><h3>Makro Dağılımı</h3><canvas id="macroSidebarChart"></canvas></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
