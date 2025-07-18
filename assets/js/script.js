@@ -28,17 +28,18 @@ btnLogin.onclick = () => {
   .catch(err => {
     console.error('Giriş hatası:', err.message);
   });
-};
-
-auth.onAuthStateChanged(user => {
+  auth.onAuthStateChanged(user => {
   if (user) {
     console.log('Oturum açık:', user.uid);
     loadCalendar(user.uid);
     loadFoods(user.uid);
+    renderCalendar();
+    updateCharts();
+    updateSidebarMacro();
   } else {
     console.log('Oturum kapalı');
   }
-});
+};
 const calendarEl=document.getElementById('calendar');
 const monthYearEl=document.getElementById('monthYear');
 const prevBtn=document.getElementById('prevMonth');
