@@ -83,10 +83,6 @@ function loadFoods(uid) {
       }
     });
 }
-auth.onAuthStateChanged(user => {
-  if (user) {
-    loadCalendar(user.uid);
-    loadFoods(user.uid);
   }
 });
 
@@ -199,5 +195,8 @@ prevBtn.onclick=()=>{
 };
 nextBtn.onclick=()=>{
  selectedMonth++; if(selectedMonth>11){selectedMonth=0;selectedYear++;}
- selectedDateKey=null;renderCalendar();updateCharts();updateSidebarMacro();
+ selectedDateKey=null
 };
+renderCalendar();
+updateCharts();
+updateSidebarMacro();
